@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #8b949e;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.flow pre {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    color: #7ee787;
+}
+
+.cta {
+    margin-top: 40px;
+    padding: 20px;
+    background: #238636;
+    border-radius: 10px;
+}
