@@ -1,44 +1,190 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: #e6edf3;
+    font-family: system-ui;
+    background: #0b0f17;
+    color: white;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 20px;
+/* SPA VIEWS */
+.view {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.4s ease;
+    padding: 80px;
+}
+
+.view.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
 }
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 52px;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #8b949e;
+p {
+    color: #9ca3af;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.primary {
+    background: #6366f1;
+    color: white;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #1f2937;
+    color: white;
+}
+
+/* TRUST */
+.trust {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.trust-box {
+    display: flex;
+    gap: 15px;
+    max-width: 300px;
+    color: #9ca3af;
+}
+
+.trust-box i {
+    color: #6366f1;
+}
+
+/* FUTURE */
+.future {
+    padding: 80px;
+    text-align: center;
+}
+
+.future-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.future-card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    text-align: left;
+}
+
+/* SIGNUP */
+.signup-box {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #1f2937;
+    background: transparent;
+    color: white;
+}
+
+input:focus {
+    border-color: #6366f1;
+}
+
+/* BACK */
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: 1px solid #1f2937;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+.flow-section {
+    padding: 80px;
+    text-align: center;
+}
+
+.flow-section h2 {
     margin-bottom: 40px;
 }
 
-.card {
-    background: #161b22;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.flow pre {
-    background: #161b22;
+.flow-step {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 14px;
     padding: 20px;
-    border-radius: 10px;
-    color: #7ee787;
+    text-align: left;
+    transition: 0.3s;
+    position: relative;
 }
 
-.cta {
-    margin-top: 40px;
-    padding: 20px;
-    background: #238636;
-    border-radius: 10px;
+.flow-step span {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #6366f1;
+    font-weight: bold;
+}
+
+.flow-step h3 {
+    margin-top: 10px;
+}
+
+.flow-step p {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* highlight final step */
+.flow-step.highlight {
+    border-color: #6366f1;
+    box-shadow: 0 0 20px rgba(99,102,241,0.2);
+}
+
+/* hover interaction */
+.flow-step:hover {
+    transform: translateY(-5px);
 }

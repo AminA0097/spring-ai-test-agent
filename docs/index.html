@@ -1,55 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Spring AI Test Agent</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
 <body>
 
-<div class="container">
+<div id="app">
 
-    <h1>🚀 Spring AI Test Agent</h1>
+    <!-- HOME -->
+    <div id="home" class="view active">
 
-    <p class="subtitle">
-        AI-powered GitHub agent that generates, runs, and fixes Spring Boot tests automatically.
-    </p>
+        <section class="hero">
+            <h1>Autonomous Test Generation for Spring Boot</h1>
 
-    <div class="card">
-        <h2>⚡ What it does</h2>
-        <ul>
-            <li>Analyzes Spring Boot projects</li>
-            <li>Generates JUnit5 + Mockito tests</li>
-            <li>Runs tests in isolated Docker environment</li>
-            <li>Fixes failing tests automatically</li>
-            <li>Creates GitHub Pull Requests</li>
-        </ul>
+            <p>
+                AI agent that analyzes your repository, generates JUnit tests,
+                runs CI, and fixes failures automatically.
+            </p>
+
+            <div class="cta">
+                <button id="cta-start" class="primary">Get Started</button>
+                <button id="cta-gh" class="secondary">View GitHub</button>
+            </div>
+        </section>
+
+        <section class="trust">
+
+            <div class="trust-box">
+                <i class="fa-solid fa-shield"></i>
+                <div>
+                    <h3>Safe Execution</h3>
+                    <p>Read-only repository analysis. No production changes.</p>
+                </div>
+            </div>
+
+            <div class="trust-box">
+                <i class="fa-solid fa-lock"></i>
+                <div>
+                    <h3>GitHub Native</h3>
+                    <p>Works with GitHub webhook + minimal permissions.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="future">
+
+            <h2>Future Capabilities</h2>
+
+            <div class="future-grid">
+
+                <div class="future-card">
+                    <h3>Auto Test Expansion</h3>
+                    <p>System learns from CI failures and improves coverage over time.</p>
+                </div>
+
+                <div class="future-card">
+                    <h3>Code Intelligence Graph</h3>
+                    <p>Builds live dependency graph of Spring Boot services.</p>
+                </div>
+
+                <div class="future-card">
+                    <h3>PR Optimization Engine</h3>
+                    <p>Suggests improvements before tests even fail.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="flow-section">
+
+            <h2>How it works</h2>
+
+            <div class="flow-grid">
+
+                <div class="flow-step">
+                    <span>1</span>
+                    <h3>GitHub Push</h3>
+                    <p>User pushes code to repository</p>
+                </div>
+
+                <div class="flow-step">
+                    <span>2</span>
+                    <h3>Repo Analysis</h3>
+                    <p>AI reads controllers, services, DTOs</p>
+                </div>
+
+                <div class="flow-step">
+                    <span>3</span>
+                    <h3>Test Generation</h3>
+                    <p>Creates JUnit5 + Mockito tests</p>
+                </div>
+
+                <div class="flow-step">
+                    <span>4</span>
+                    <h3>CI Execution</h3>
+                    <p>Runs tests inside Docker environment</p>
+                </div>
+
+                <div class="flow-step">
+                    <span>5</span>
+                    <h3>Failure Detection</h3>
+                    <p>Detects failed tests & stack traces</p>
+                </div>
+
+                <div class="flow-step">
+                    <span>6</span>
+                    <h3>AI Fix Loop</h3>
+                    <p>Suggests fixes + regenerates code</p>
+                </div>
+
+                <div class="flow-step highlight">
+                    <span>7</span>
+                    <h3>Pull Request</h3>
+                    <p>Creates PR for review & approval</p>
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
 
-    <div class="flow">
-        <h2>🔁 How it works</h2>
-        <pre>
-GitHub Push
-   ↓
-Analyze Repo
-   ↓
-Generate Tests
-   ↓
-Run Tests
-   ↓
-Fix Errors (AI Loop)
-   ↓
-Create PR
-      </pre>
+    <!-- DETAIL -->
+    <div id="detail" class="view">
+
+        <button class="back" id="back-home">← Back</button>
+
+        <div id="detail-content"></div>
+
     </div>
 
-    <div class="cta">
-        <h2>🧠 Built for Spring Boot teams</h2>
-        <p>Turn your repository into a self-testing system.</p>
+    <!-- SIGNUP -->
+    <div id="signup" class="view">
+
+        <button class="back" id="back-home-2">← Back</button>
+
+        <div class="signup-box">
+
+            <h2>Request Early Access</h2>
+            <p>Join developers building AI-native testing systems.</p>
+
+            <form class="form">
+
+                <input type="text" placeholder="Full Name" required/>
+                <input type="email" placeholder="Email" required/>
+                <input type="text" placeholder="GitHub Username" required/>
+
+                <button class="primary" type="submit">Join Waitlist</button>
+
+            </form>
+
+        </div>
+
     </div>
 
 </div>
 
+<script src="app.js"></script>
 </body>
 </html>
